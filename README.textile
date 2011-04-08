@@ -1,3 +1,7 @@
+h3. Current status
+
+The dashboard plugin for Wolf CMS was originally created by "tuupola":http://github.com/tuupola. I took over maintainership for the plugin on his request since he no longer has time to work on it.
+
 h3. Changelog
 
 h4. 0.5.0
