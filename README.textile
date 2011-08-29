@@ -1,8 +1,19 @@
 h3. Current status
 
-The dashboard plugin for Wolf CMS was originally created by "tuupola":http://github.com/tuupola. I took over maintainership for the plugin on his request since he no longer has time to work on it.
+The dashboard plugin for Wolf CMS was originally created by "tuupola":http://github.com/tuupola.
+I took over maintainership for the plugin on his request since he no longer has time to work on it.
 
-h3. Changelog
+h3. Changelog - Martijn van der Kleijn
+
+h4. 0.6.0
+
+* Added DataTables sorter/filter
+* Merged Today, Yesterday and Others tables into one sortable/filterable table
+* Added short explainatory notes
+* Improved table html
+* Simplified controller code by removing mysql/sqlite specific code
+
+h3. Changelog - Mika Tuupola
 
 h4. 0.5.0
 

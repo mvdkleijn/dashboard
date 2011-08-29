@@ -1,18 +1,36 @@
-tr.odd, tr.odd > td {
-    background-color: #dfdfdf;
-    border-top: 0px;
+.meta {
+    margin: 1em 1em -0.5em 1em;
+    padding-bottom: 0.5em;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
 }
 
-tr.even, tr.even > td {
+tr.odd, tr.odd > td {
     background-color: #fff;
     border-top: 0px;
 }
 
-table.fieldset {
-    margin-top: 10px;
-    margin-bottom: 10px;
+tr.even, tr.even > td {
+    background-color: #f9f9f9;
+    border-top: 0px;
+}
+
+td.priority {
+    width: 0px;
+    text-align: center;
 }
 
 td.date {
     width: 180px;
-};
+    text-align: center;
+}
+
+td.hidden { visibility: collapse; width: 1px; margin: 0; padding: 0; }
+
+th.moment { text-align: center; }
+
+.dashboardTable img { vertical-align: middle; }
