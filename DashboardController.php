@@ -33,11 +33,20 @@ class DashboardController extends PluginController {
 
 
     function clear() {
-        // TODO: replace cumbersome recursive delete by single TRUNCATE
-        $log_entry = Record::findAllFrom('DashboardLogEntry');
-        foreach ($log_entry as $entry) {
-            $entry->delete();
+        // TODO: replace this in future by Record's deleteAll routine.
+        $pdo = Record::getConnection();
+        $driver = $pdo->getAttribute(PDO::ATTR_DRIVER_NAME);
+        
+        if ($driver == 'mysql' || $driver == 'pgsql') {
+            $sql = 'TRUNCATE '.Record::tableNameFromClassName('DashboardLogEntry');
         }
+        
+        if ($driver == 'sqlite') {
+            $sql = 'DELETE FROM '.Record::tableNameFromClassName('DashboardLogEntry');
+        }
+        
+        $pdo->exec($sql);
+
         redirect(get_url('plugin/dashboard/'));
     }
 
