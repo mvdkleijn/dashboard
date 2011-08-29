@@ -7,11 +7,14 @@ h3. Changelog - Martijn van der Kleijn
 
 h4. 0.6.0
 
+* Added PostgreSQL support
+* Clear function changed to use TRUNCATE instead of recursive DELETE FROM
 * Added DataTables sorter/filter
 * Merged Today, Yesterday and Others tables into one sortable/filterable table
 * Added short explainatory notes
 * Improved table html
 * Simplified controller code by removing mysql/sqlite specific code
+* Plugin DB table is no longer DROPped when plugin disabled, only when plugin uninstalled.
 
 h3. Changelog - Mika Tuupola
 
