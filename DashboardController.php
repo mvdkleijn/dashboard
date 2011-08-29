@@ -30,6 +30,11 @@ class DashboardController extends PluginController {
             'log_entries' => Record::findAllFrom('DashboardLogEntry', 'created_on=created_on ORDER BY created_on DESC'),
         ));
     }
+    
+    
+    function settings() {
+        $this->display('dashboard/views/settings');
+    }
 
 
     function clear() {

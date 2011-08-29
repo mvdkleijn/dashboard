@@ -15,7 +15,7 @@
                 <tr class="<?php print odd_even(); ?>">
                     <td class="hidden"><?php echo $entrynum;?></td>
                     <td class="priority"><img src="<?php echo PLUGINS_URI; ?>dashboard/img/<?php print $entry->priority('string') ?>.png" title="<?php print $entry->priority('string') ?>" /></td>
-                    <td class="message"><?php print $entry->message ?></td>
+                    <td class="dashboardMessage"><?php print $entry->message ?></td>
                     <td class="date"><a title="<?php print $entry->created_on ?>"><?php print DateDifference::getString(new DateTime($entry->created_on)); ?></a></td>
                 </tr>	
             <?php $entrynum = $entrynum + 1; ?>

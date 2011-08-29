@@ -34,3 +34,7 @@ td.hidden { visibility: collapse; width: 1px; margin: 0; padding: 0; }
 th.moment { text-align: center; }
 
 .dashboardTable img { vertical-align: middle; }
+
+/* pre-wolfcms 0.8.x data - Remove once 0.8.0 is out. */
+table { width: 100%; }
+td { padding: 0.2em; }

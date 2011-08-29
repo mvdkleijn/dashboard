@@ -1,5 +1,5 @@
 <?php if (AuthUser::hasPermission('admin_edit')) { ?>
-<p class="button"><a href="#settings"><img src="<?php echo ICONS_URI; ?>settings-32.png" align="middle" alt="page icon" /> <?php echo __('Settings'); ?></a></p>
+<p class="button"><a href="<?php echo get_url('plugin/dashboard/settings'); ?>"><img src="<?php echo ICONS_URI; ?>settings-32.png" align="middle" alt="page icon" /> <?php echo __('Settings'); ?></a></p>
 <?php } ?>
     
 <div class="box">
