@@ -28,7 +28,7 @@ Plugin::setInfos(array(
     'version'               => '0.6.0',
     'license'               => 'MIT',
     'author'                => 'Martijn van der Kleijn (original Mika Tuupola)',
-    'update_url'            => '',
+//    'update_url'            => '',
     'website'               => 'https://github.com/mvdkleijn/dashboard',
     'require_wolf_version'  => '0.7.0'
 ));
