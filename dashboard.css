@@ -1,40 +1,42 @@
-.meta {
+#body_plugin_dashboard .meta {
     margin: 1em 1em -0.5em 1em;
     padding-bottom: 0.5em;
 }
-.left {
+#body_plugin_dashboard .left {
     float: left;
 }
-.right {
+#body_plugin_dashboard .right {
     float: right;
 }
 
-tr.odd, tr.odd > td {
+#body_plugin_dashboard tr.odd, 
+#body_plugin_dashboard tr.odd > td {
     background-color: #fff;
     border-top: 0px;
 }
 
-tr.even, tr.even > td {
+#body_plugin_dashboard tr.even, 
+#body_plugin_dashboard tr.even > td {
     background-color: #f9f9f9;
     border-top: 0px;
 }
 
-td.priority {
+#body_plugin_dashboard td.priority {
     width: 0px;
     text-align: center;
 }
 
-td.date {
+#body_plugin_dashboard td.date {
     width: 180px;
     text-align: center;
 }
 
-td.hidden { visibility: collapse; width: 1px; margin: 0; padding: 0; }
+#body_plugin_dashboard td.hidden { visibility: collapse; width: 1px; margin: 0; padding: 0; }
 
-th.moment { text-align: center; }
+#body_plugin_dashboard th.moment { text-align: center; }
 
-.dashboardTable img { vertical-align: middle; }
+#body_plugin_dashboard .dashboardTable img { vertical-align: middle; }
 
 /* pre-wolfcms 0.8.x data - Remove once 0.8.0 is out. */
-table { width: 100%; }
-td { padding: 0.2em; }
+#body_plugin_dashboard table { width: 100%; }
+#body_plugin_dashboard td { padding: 0.2em; }
