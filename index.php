@@ -25,7 +25,7 @@ Plugin::setInfos(array(
     'id'                    => 'dashboard',
     'title'                 => __('Dashboard'),
     'description'           => __('Keep up to date with what is happening with your site.'),
-    'version'               => '0.6.0',
+    'version'               => '1.0',
     'license'               => 'MIT',
     'author'                => 'Martijn van der Kleijn (original Mika Tuupola)',
 //    'update_url'            => '',
