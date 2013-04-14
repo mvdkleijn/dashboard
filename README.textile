@@ -1,9 +1,18 @@
 h3. Current status
 
-The dashboard plugin for Wolf CMS was originally created by "tuupola":http://github.com/tuupola.
-I took over maintainership for the plugin on his request since he no longer has time to work on it.
+The dashboard plugin for Wolf CMS was originally created by
+"tuupola":http://github.com/tuupola. I took over maintainership for the plugin
+on his request since he no longer has time to work on it.
+
+In the changelog below, I indicated where the change in maintainer was.
 
 h3. Changelog - Martijn van der Kleijn
+
+h4. 1.0
+
+* Added en-message.php translation file to support Wolf CMS 0.7.6+
+* Added "body_plugin_dashboard" CSS ID to all rules to prevent interference with other plugins. (thanks Marek)
+* Added polish translation. (thanks Marek)
 
 h4. 0.6.0
 
