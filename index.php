@@ -251,7 +251,4 @@ if (defined('CMS_BACKEND')) {
         dashboard_log_event($message, 'core');
     }
 
-
-
-
 } 
