@@ -23,7 +23,6 @@ class DashboardLogEntry extends Record {
     public function beforeSave() {
         $this->created_on = date('Y-m-d H:i:s');
         $this->username = AuthUser::getRecord()->name;
-        $this->message = __($this->message, array(':username' => $this->username));
         return true;
     }
 

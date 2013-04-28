@@ -33,10 +33,32 @@ Plugin::setInfos(array(
     'require_wolf_version'  => '0.7.0'
 ));
 
+    
+AutoLoader::addFolder(dirname(__FILE__).'/models');
+
+Observer::observe('log_event', 'dashboard_log_event');
+
+function dashboard_log_event($message, $ident='misc', $priority=DASHBOARD_LOG_NOTICE) {
+    /* BC. Order of parameters was swapped in 0.4.0. */
+    if (is_integer($ident)) {
+        $warning = __('Message below from <b>:ident</b> uses old Dashboard API.', array(':ident' => $priority));
+        dashboard_log_event($warning, 'dashboard', DASHBOARD_LOG_WARNING);
+
+        $data['ident'] = $priority;
+        $data['priority'] = $ident;
+    }
+    else {
+        $data['ident'] = $ident;
+        $data['priority'] = $priority;
+    }
+    $data['message'] = $message;
+    $entry = new DashboardLogEntry($data);
+    $entry->save();
+}
+    
 /* Stuff for backend. */
 if (defined('CMS_BACKEND')) {
 
-    AutoLoader::addFolder(dirname(__FILE__).'/models');
     AutoLoader::addFolder(dirname(__FILE__).'/lib');
 
     Plugin::addController('dashboard', __('Dashboard'), "admin_view", true);
@@ -66,7 +88,6 @@ if (defined('CMS_BACKEND')) {
     Observer::observe('admin_login_failed', 'dashboard_log_admin_login_failure');
     Observer::observe('admin_after_logout', 'dashboard_log_admin_logout');
 
-    Observer::observe('log_event', 'dashboard_log_event');
 
 
     /* Page */
@@ -231,22 +252,6 @@ if (defined('CMS_BACKEND')) {
     }
 
 
-    function dashboard_log_event($message, $ident='misc', $priority=DASHBOARD_LOG_NOTICE) {
-        /* BC. Order of parameters was swapped in 0.4.0. */
-        if (is_integer($ident)) {
-            $warning = __('Message below from <b>:ident</b> uses old Dashboard API.', array(':ident' => $priority));
-            dashboard_log_event($warning, 'dashboard', DASHBOARD_LOG_WARNING);
 
-            $data['ident'] = $priority;
-            $data['priority'] = $ident;
-        }
-        else {
-            $data['ident'] = $ident;
-            $data['priority'] = $priority;
-        }
-        $data['message'] = $message;
-        $entry = new DashboardLogEntry($data);
-        $entry->save();
-    }
 
 } 
